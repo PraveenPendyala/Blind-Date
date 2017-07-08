@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		415FBC321F1164810030B258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC311F1164810030B258 /* AppDelegate.swift */; };
+		415FBC341F1164810030B258 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC331F1164810030B258 /* ViewController.swift */; };
+		415FBC371F1164810030B258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC351F1164810030B258 /* Main.storyboard */; };
+		415FBC391F1164810030B258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC381F1164810030B258 /* Assets.xcassets */; };
+		415FBC3C1F1164810030B258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC3A1F1164810030B258 /* LaunchScreen.storyboard */; };
+		415FBC471F1164810030B258 /* Blind_DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC461F1164810030B258 /* Blind_DateTests.swift */; };
+		415FBC521F1164810030B258 /* Blind_DateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC511F1164810030B258 /* Blind_DateUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		415FBC431F1164810030B258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 415FBC261F1164810030B258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 415FBC2D1F1164810030B258;
+			remoteInfo = "Blind Date";
+		};
+		415FBC4E1F1164810030B258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 415FBC261F1164810030B258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 415FBC2D1F1164810030B258;
+			remoteInfo = "Blind Date";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		415FBC2E1F1164810030B258 /* Blind Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blind Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		415FBC311F1164810030B258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		415FBC331F1164810030B258 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		415FBC361F1164810030B258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		415FBC381F1164810030B258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		415FBC3B1F1164810030B258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		415FBC3D1F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		415FBC421F1164810030B258 /* Blind DateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blind DateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		415FBC461F1164810030B258 /* Blind_DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_DateTests.swift; sourceTree = "<group>"; };
+		415FBC481F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		415FBC4D1F1164810030B258 /* Blind DateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blind DateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		415FBC511F1164810030B258 /* Blind_DateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_DateUITests.swift; sourceTree = "<group>"; };
+		415FBC531F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		415FBC2B1F1164810030B258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415FBC3F1F1164810030B258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415FBC4A1F1164810030B258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		415FBC251F1164810030B258 = {
+			isa = PBXGroup;
+			children = (
+				415FBC301F1164810030B258 /* Blind Date */,
+				415FBC451F1164810030B258 /* Blind DateTests */,
+				415FBC501F1164810030B258 /* Blind DateUITests */,
+				415FBC2F1F1164810030B258 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		415FBC2F1F1164810030B258 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				415FBC2E1F1164810030B258 /* Blind Date.app */,
+				415FBC421F1164810030B258 /* Blind DateTests.xctest */,
+				415FBC4D1F1164810030B258 /* Blind DateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		415FBC301F1164810030B258 /* Blind Date */ = {
+			isa = PBXGroup;
+			children = (
+				415FBC311F1164810030B258 /* AppDelegate.swift */,
+				415FBC331F1164810030B258 /* ViewController.swift */,
+				415FBC351F1164810030B258 /* Main.storyboard */,
+				415FBC381F1164810030B258 /* Assets.xcassets */,
+				415FBC3A1F1164810030B258 /* LaunchScreen.storyboard */,
+				415FBC3D1F1164810030B258 /* Info.plist */,
+			);
+			path = "Blind Date";
+			sourceTree = "<group>";
+		};
+		415FBC451F1164810030B258 /* Blind DateTests */ = {
+			isa = PBXGroup;
+			children = (
+				415FBC461F1164810030B258 /* Blind_DateTests.swift */,
+				415FBC481F1164810030B258 /* Info.plist */,
+			);
+			path = "Blind DateTests";
+			sourceTree = "<group>";
+		};
+		415FBC501F1164810030B258 /* Blind DateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				415FBC511F1164810030B258 /* Blind_DateUITests.swift */,
+				415FBC531F1164810030B258 /* Info.plist */,
+			);
+			path = "Blind DateUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		415FBC2D1F1164810030B258 /* Blind Date */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 415FBC561F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind Date" */;
+			buildPhases = (
+				415FBC2A1F1164810030B258 /* Sources */,
+				415FBC2B1F1164810030B258 /* Frameworks */,
+				415FBC2C1F1164810030B258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blind Date";
+			productName = "Blind Date";
+			productReference = 415FBC2E1F1164810030B258 /* Blind Date.app */;
+			productType = "com.apple.product-type.application";
+		};
+		415FBC411F1164810030B258 /* Blind DateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 415FBC591F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateTests" */;
+			buildPhases = (
+				415FBC3E1F1164810030B258 /* Sources */,
+				415FBC3F1F1164810030B258 /* Frameworks */,
+				415FBC401F1164810030B258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				415FBC441F1164810030B258 /* PBXTargetDependency */,
+			);
+			name = "Blind DateTests";
+			productName = "Blind DateTests";
+			productReference = 415FBC421F1164810030B258 /* Blind DateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		415FBC4C1F1164810030B258 /* Blind DateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 415FBC5C1F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateUITests" */;
+			buildPhases = (
+				415FBC491F1164810030B258 /* Sources */,
+				415FBC4A1F1164810030B258 /* Frameworks */,
+				415FBC4B1F1164810030B258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				415FBC4F1F1164810030B258 /* PBXTargetDependency */,
+			);
+			name = "Blind DateUITests";
+			productName = "Blind DateUITests";
+			productReference = 415FBC4D1F1164810030B258 /* Blind DateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		415FBC261F1164810030B258 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Praveen Pendyala";
+				TargetAttributes = {
+					415FBC2D1F1164810030B258 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = E6W4NZ53P8;
+						ProvisioningStyle = Automatic;
+					};
+					415FBC411F1164810030B258 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = E6W4NZ53P8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 415FBC2D1F1164810030B258;
+					};
+					415FBC4C1F1164810030B258 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = E6W4NZ53P8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 415FBC2D1F1164810030B258;
+					};
+				};
+			};
+			buildConfigurationList = 415FBC291F1164810030B258 /* Build configuration list for PBXProject "Blind Date" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 415FBC251F1164810030B258;
+			productRefGroup = 415FBC2F1F1164810030B258 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				415FBC2D1F1164810030B258 /* Blind Date */,
+				415FBC411F1164810030B258 /* Blind DateTests */,
+				415FBC4C1F1164810030B258 /* Blind DateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		415FBC2C1F1164810030B258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415FBC3C1F1164810030B258 /* LaunchScreen.storyboard in Resources */,
+				415FBC391F1164810030B258 /* Assets.xcassets in Resources */,
+				415FBC371F1164810030B258 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415FBC401F1164810030B258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415FBC4B1F1164810030B258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		415FBC2A1F1164810030B258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415FBC341F1164810030B258 /* ViewController.swift in Sources */,
+				415FBC321F1164810030B258 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415FBC3E1F1164810030B258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415FBC471F1164810030B258 /* Blind_DateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415FBC491F1164810030B258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415FBC521F1164810030B258 /* Blind_DateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		415FBC441F1164810030B258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 415FBC2D1F1164810030B258 /* Blind Date */;
+			targetProxy = 415FBC431F1164810030B258 /* PBXContainerItemProxy */;
+		};
+		415FBC4F1F1164810030B258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 415FBC2D1F1164810030B258 /* Blind Date */;
+			targetProxy = 415FBC4E1F1164810030B258 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		415FBC351F1164810030B258 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				415FBC361F1164810030B258 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		415FBC3A1F1164810030B258 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				415FBC3B1F1164810030B258 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		415FBC541F1164810030B258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		415FBC551F1164810030B258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		415FBC571F1164810030B258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E6W4NZ53P8;
+				INFOPLIST_FILE = "Blind Date/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-Date";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		415FBC581F1164810030B258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E6W4NZ53P8;
+				INFOPLIST_FILE = "Blind Date/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-Date";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		415FBC5A1F1164810030B258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E6W4NZ53P8;
+				INFOPLIST_FILE = "Blind DateTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blind Date.app/Blind Date";
+			};
+			name = Debug;
+		};
+		415FBC5B1F1164810030B258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E6W4NZ53P8;
+				INFOPLIST_FILE = "Blind DateTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blind Date.app/Blind Date";
+			};
+			name = Release;
+		};
+		415FBC5D1F1164810030B258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = E6W4NZ53P8;
+				INFOPLIST_FILE = "Blind DateUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Blind Date";
+			};
+			name = Debug;
+		};
+		415FBC5E1F1164810030B258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = E6W4NZ53P8;
+				INFOPLIST_FILE = "Blind DateUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Blind Date";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		415FBC291F1164810030B258 /* Build configuration list for PBXProject "Blind Date" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				415FBC541F1164810030B258 /* Debug */,
+				415FBC551F1164810030B258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		415FBC561F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind Date" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				415FBC571F1164810030B258 /* Debug */,
+				415FBC581F1164810030B258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		415FBC591F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				415FBC5A1F1164810030B258 /* Debug */,
+				415FBC5B1F1164810030B258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		415FBC5C1F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				415FBC5D1F1164810030B258 /* Debug */,
+				415FBC5E1F1164810030B258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 415FBC261F1164810030B258 /* Project object */;
+}
