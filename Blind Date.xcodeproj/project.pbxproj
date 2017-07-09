@@ -522,6 +522,7 @@
 				415FBC581F1164810030B258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		415FBC591F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +531,7 @@
 				415FBC5B1F1164810030B258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		415FBC5C1F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +540,7 @@
 				415FBC5E1F1164810030B258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
