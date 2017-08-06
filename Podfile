@@ -11,7 +11,9 @@ target 'Blind Date' do
   pod 'Firebase/Database'
   pod 'Firebase/Core'
   pod 'JSQMessagesViewController'
-
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
   target 'Blind DateTests' do
     inherit! :search_paths
     # Pods for testing
