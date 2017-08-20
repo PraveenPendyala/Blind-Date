@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>411291231688-i2366umbp8svc0mmhrst4toih946cor3.apps.googleusercontent.com</string>
+	<string>91572154041-6c2200364cu9kafjr7cgbpj85rmod101.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.411291231688-i2366umbp8svc0mmhrst4toih946cor3</string>
+	<string>com.googleusercontent.apps.91572154041-6c2200364cu9kafjr7cgbpj85rmod101</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCRBxIH01Ez39PU9_Tt5gz4dgUNG45sp1A</string>
+	<string>AIzaSyBP8Dw2bfEmmr3bdDEqIqDDFXxlfA5DxhM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>411291231688</string>
+	<string>91572154041</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.praveenpendyala.Blind-Date</string>
+	<string>com.ios.instantlivefinder</string>
 	<key>PROJECT_ID</key>
-	<string>blinddate-3b53a</string>
+	<string>blinddate-52801</string>
 	<key>STORAGE_BUCKET</key>
-	<string>blinddate-3b53a.appspot.com</string>
+	<string>blinddate-52801.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:411291231688:ios:c00658bf213b2a34</string>
+	<string>1:91572154041:ios:f98fb6d1eab59f7c</string>
 	<key>DATABASE_URL</key>
-	<string>https://blinddate-3b53a.firebaseio.com</string>
+	<string>https://blinddate-52801.firebaseio.com</string>
 </dict>
 </plist>
