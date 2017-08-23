@@ -15,6 +15,8 @@
 		415FBC471F1164810030B258 /* Blind_DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC461F1164810030B258 /* Blind_DateTests.swift */; };
 		415FBC521F1164810030B258 /* Blind_DateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC511F1164810030B258 /* Blind_DateUITests.swift */; };
 		41ABDFDC1F4A272600940CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */; };
+		41B0E0041F4CF44500D45AF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0E0031F4CF44500D45AF3 /* User.swift */; };
+		41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */; };
 		AA39A5C08B4FC8BFC982E486 /* Pods_Blind_DateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C675CC67EE1A48A832F298A /* Pods_Blind_DateTests.framework */; };
 		B9672248A6BFF20ADCB7CA94 /* Pods_Blind_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17216CAB09CCC326E3E122 /* Pods_Blind_Date.framework */; };
 		E956DA35B2B57F3190D04DD8 /* Pods_Blind_DateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198CBA203733407E9BBC8673 /* Pods_Blind_DateUITests.framework */; };
@@ -56,6 +58,8 @@
 		415FBC511F1164810030B258 /* Blind_DateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_DateUITests.swift; sourceTree = "<group>"; };
 		415FBC531F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41B0E0031F4CF44500D45AF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatUserTableViewCell.xib; sourceTree = "<group>"; };
 		5D10069C1AB99FCF64824529 /* Pods-Blind Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blind Date/Pods-Blind Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8C675CC67EE1A48A832F298A /* Pods_Blind_DateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blind_DateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE906FD488B8731063EE74C /* Pods-Blind DateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateUITests/Pods-Blind DateUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 		415FBC301F1164810030B258 /* Blind Date */ = {
 			isa = PBXGroup;
 			children = (
+				41B0E0051F4CFAC100D45AF3 /* TableViewCells */,
+				41B0E0021F4CF42200D45AF3 /* Models */,
 				415FBC311F1164810030B258 /* AppDelegate.swift */,
 				415FBC331F1164810030B258 /* LoginViewController.swift */,
 				415FBC351F1164810030B258 /* Main.storyboard */,
@@ -156,6 +162,22 @@
 				415FBC531F1164810030B258 /* Info.plist */,
 			);
 			path = "Blind DateUITests";
+			sourceTree = "<group>";
+		};
+		41B0E0021F4CF42200D45AF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41B0E0031F4CF44500D45AF3 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		41B0E0051F4CFAC100D45AF3 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		98384BBB870C77382298C665 /* Frameworks */ = {
@@ -289,6 +311,7 @@
 			files = (
 				415FBC3C1F1164810030B258 /* LaunchScreen.storyboard in Resources */,
 				41ABDFDC1F4A272600940CDF /* GoogleService-Info.plist in Resources */,
+				41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */,
 				415FBC391F1164810030B258 /* Assets.xcassets in Resources */,
 				415FBC371F1164810030B258 /* Main.storyboard in Resources */,
 			);
@@ -481,6 +504,7 @@
 			files = (
 				415FBC341F1164810030B258 /* LoginViewController.swift in Sources */,
 				415FBC321F1164810030B258 /* AppDelegate.swift in Sources */,
+				41B0E0041F4CF44500D45AF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

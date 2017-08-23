@@ -20,6 +20,7 @@ final class LoginViewController: UIViewController {
         loginButton.center = self.view.center
         self.view.addSubview(loginButton)
         loginButton.delegate = self
+        FBSDKProfile.enableUpdates(onAccessTokenChange: true)
     }
 
     override func didReceiveMemoryWarning() {
