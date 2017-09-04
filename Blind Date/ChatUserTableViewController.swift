@@ -25,6 +25,16 @@ class ChatUserTableViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    
+    // MARK: -
+    // MARK: View Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.register( UINib(nibName: "ChatUserTableViewCell", bundle: nil),
+                        forCellReuseIdentifier: "ChatUserTableViewCell")
+    }
+    
     // MARK: -
     // MARK: Private Methods
     
@@ -38,5 +48,20 @@ class ChatUserTableViewController: UIViewController {
             }
         })
     }
+}
+
+
+// MARK: -
+// MARK: -
+
+extension ChatUserTableViewController: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatUserTableViewCell", for: indexPath)
+        return cell
+    }
 }
