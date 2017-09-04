@@ -12,33 +12,12 @@
 		415FBC371F1164810030B258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC351F1164810030B258 /* Main.storyboard */; };
 		415FBC391F1164810030B258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC381F1164810030B258 /* Assets.xcassets */; };
 		415FBC3C1F1164810030B258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC3A1F1164810030B258 /* LaunchScreen.storyboard */; };
-		415FBC471F1164810030B258 /* Blind_DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC461F1164810030B258 /* Blind_DateTests.swift */; };
-		415FBC521F1164810030B258 /* Blind_DateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC511F1164810030B258 /* Blind_DateUITests.swift */; };
 		417F34E01F5DD1AB00874C7B /* ChatUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */; };
 		41ABDFDC1F4A272600940CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */; };
 		41B0E0041F4CF44500D45AF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0E0031F4CF44500D45AF3 /* User.swift */; };
 		41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */; };
-		AA39A5C08B4FC8BFC982E486 /* Pods_Blind_DateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C675CC67EE1A48A832F298A /* Pods_Blind_DateTests.framework */; };
 		B9672248A6BFF20ADCB7CA94 /* Pods_Blind_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17216CAB09CCC326E3E122 /* Pods_Blind_Date.framework */; };
-		E956DA35B2B57F3190D04DD8 /* Pods_Blind_DateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198CBA203733407E9BBC8673 /* Pods_Blind_DateUITests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		415FBC431F1164810030B258 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 415FBC261F1164810030B258 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 415FBC2D1F1164810030B258;
-			remoteInfo = "Blind Date";
-		};
-		415FBC4E1F1164810030B258 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 415FBC261F1164810030B258 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 415FBC2D1F1164810030B258;
-			remoteInfo = "Blind Date";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		057BF41ECC45592CF371514B /* Pods-Blind DateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateTests/Pods-Blind DateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,12 +31,6 @@
 		415FBC381F1164810030B258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		415FBC3B1F1164810030B258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		415FBC3D1F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		415FBC421F1164810030B258 /* Blind DateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blind DateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		415FBC461F1164810030B258 /* Blind_DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_DateTests.swift; sourceTree = "<group>"; };
-		415FBC481F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		415FBC4D1F1164810030B258 /* Blind DateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blind DateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		415FBC511F1164810030B258 /* Blind_DateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_DateUITests.swift; sourceTree = "<group>"; };
-		415FBC531F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatUserTableViewController.swift; sourceTree = "<group>"; };
 		41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		41B0E0031F4CF44500D45AF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -75,22 +48,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9672248A6BFF20ADCB7CA94 /* Pods_Blind_Date.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		415FBC3F1F1164810030B258 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA39A5C08B4FC8BFC982E486 /* Pods_Blind_DateTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		415FBC4A1F1164810030B258 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E956DA35B2B57F3190D04DD8 /* Pods_Blind_DateUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				415FBC301F1164810030B258 /* Blind Date */,
-				415FBC451F1164810030B258 /* Blind DateTests */,
-				415FBC501F1164810030B258 /* Blind DateUITests */,
 				415FBC2F1F1164810030B258 /* Products */,
 				2ADB97D401B643124F9276F9 /* Pods */,
 				98384BBB870C77382298C665 /* Frameworks */,
@@ -126,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				415FBC2E1F1164810030B258 /* Blind Date.app */,
-				415FBC421F1164810030B258 /* Blind DateTests.xctest */,
-				415FBC4D1F1164810030B258 /* Blind DateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,24 +100,6 @@
 				41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */,
 			);
 			path = "Blind Date";
-			sourceTree = "<group>";
-		};
-		415FBC451F1164810030B258 /* Blind DateTests */ = {
-			isa = PBXGroup;
-			children = (
-				415FBC461F1164810030B258 /* Blind_DateTests.swift */,
-				415FBC481F1164810030B258 /* Info.plist */,
-			);
-			path = "Blind DateTests";
-			sourceTree = "<group>";
-		};
-		415FBC501F1164810030B258 /* Blind DateUITests */ = {
-			isa = PBXGroup;
-			children = (
-				415FBC511F1164810030B258 /* Blind_DateUITests.swift */,
-				415FBC531F1164810030B258 /* Info.plist */,
-			);
-			path = "Blind DateUITests";
 			sourceTree = "<group>";
 		};
 		41B0E0021F4CF42200D45AF3 /* Models */ = {
@@ -216,48 +151,6 @@
 			productReference = 415FBC2E1F1164810030B258 /* Blind Date.app */;
 			productType = "com.apple.product-type.application";
 		};
-		415FBC411F1164810030B258 /* Blind DateTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 415FBC591F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateTests" */;
-			buildPhases = (
-				15925BAF632BF0854FCBBA8F /* [CP] Check Pods Manifest.lock */,
-				415FBC3E1F1164810030B258 /* Sources */,
-				415FBC3F1F1164810030B258 /* Frameworks */,
-				415FBC401F1164810030B258 /* Resources */,
-				803D9CABF11CB1CE60955A74 /* [CP] Embed Pods Frameworks */,
-				66E6767A8AE127E79D4E37CF /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				415FBC441F1164810030B258 /* PBXTargetDependency */,
-			);
-			name = "Blind DateTests";
-			productName = "Blind DateTests";
-			productReference = 415FBC421F1164810030B258 /* Blind DateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		415FBC4C1F1164810030B258 /* Blind DateUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 415FBC5C1F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateUITests" */;
-			buildPhases = (
-				94E57C45B83F4F8968E61A1F /* [CP] Check Pods Manifest.lock */,
-				415FBC491F1164810030B258 /* Sources */,
-				415FBC4A1F1164810030B258 /* Frameworks */,
-				415FBC4B1F1164810030B258 /* Resources */,
-				1FE95093CCAA09176AE888CB /* [CP] Embed Pods Frameworks */,
-				E93C40BF62F1FC193AA359ED /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				415FBC4F1F1164810030B258 /* PBXTargetDependency */,
-			);
-			name = "Blind DateUITests";
-			productName = "Blind DateUITests";
-			productReference = 415FBC4D1F1164810030B258 /* Blind DateUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -271,19 +164,8 @@
 					415FBC2D1F1164810030B258 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = A828SBS4G2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
-					};
-					415FBC411F1164810030B258 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = E6W4NZ53P8;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 415FBC2D1F1164810030B258;
-					};
-					415FBC4C1F1164810030B258 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = E6W4NZ53P8;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 415FBC2D1F1164810030B258;
 					};
 				};
 			};
@@ -301,8 +183,6 @@
 			projectRoot = "";
 			targets = (
 				415FBC2D1F1164810030B258 /* Blind Date */,
-				415FBC411F1164810030B258 /* Blind DateTests */,
-				415FBC4C1F1164810030B258 /* Blind DateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,56 +200,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		415FBC401F1164810030B258 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		415FBC4B1F1164810030B258 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15925BAF632BF0854FCBBA8F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Blind DateTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1FE95093CCAA09176AE888CB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blind DateUITests/Pods-Blind DateUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5B2E7C2A69230EE283AAFC58 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,21 +216,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blind Date/Pods-Blind Date-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		66E6767A8AE127E79D4E37CF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blind DateTests/Pods-Blind DateTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D9006923D015087BBEF9AB4 /* [CP] Embed Pods Frameworks */ = {
@@ -432,39 +250,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blind Date/Pods-Blind Date-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		803D9CABF11CB1CE60955A74 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blind DateTests/Pods-Blind DateTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		94E57C45B83F4F8968E61A1F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Blind DateUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C53496FEB2D66DCE3A32C7E8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,21 +268,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E93C40BF62F1FC193AA359ED /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blind DateUITests/Pods-Blind DateUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -512,36 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		415FBC3E1F1164810030B258 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				415FBC471F1164810030B258 /* Blind_DateTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		415FBC491F1164810030B258 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				415FBC521F1164810030B258 /* Blind_DateUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		415FBC441F1164810030B258 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 415FBC2D1F1164810030B258 /* Blind Date */;
-			targetProxy = 415FBC431F1164810030B258 /* PBXContainerItemProxy */;
-		};
-		415FBC4F1F1164810030B258 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 415FBC2D1F1164810030B258 /* Blind Date */;
-			targetProxy = 415FBC4E1F1164810030B258 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		415FBC351F1164810030B258 /* Main.storyboard */ = {
@@ -641,6 +382,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -671,7 +413,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -688,69 +431,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		415FBC5A1F1164810030B258 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4B20845E05D44C624F3825C /* Pods-Blind DateTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = E6W4NZ53P8;
-				INFOPLIST_FILE = "Blind DateTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blind Date.app/Blind Date";
-			};
-			name = Debug;
-		};
-		415FBC5B1F1164810030B258 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 057BF41ECC45592CF371514B /* Pods-Blind DateTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = E6W4NZ53P8;
-				INFOPLIST_FILE = "Blind DateTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blind Date.app/Blind Date";
-			};
-			name = Release;
-		};
-		415FBC5D1F1164810030B258 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E621AF7A5306FF5C4C990C2 /* Pods-Blind DateUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = E6W4NZ53P8;
-				INFOPLIST_FILE = "Blind DateUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Blind Date";
-			};
-			name = Debug;
-		};
-		415FBC5E1F1164810030B258 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DE906FD488B8731063EE74C /* Pods-Blind DateUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = E6W4NZ53P8;
-				INFOPLIST_FILE = "Blind DateUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.praveenpendyala.Blind-DateUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Blind Date";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -771,24 +453,6 @@
 			buildConfigurations = (
 				415FBC571F1164810030B258 /* Debug */,
 				415FBC581F1164810030B258 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		415FBC591F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				415FBC5A1F1164810030B258 /* Debug */,
-				415FBC5B1F1164810030B258 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		415FBC5C1F1164810030B258 /* Build configuration list for PBXNativeTarget "Blind DateUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				415FBC5D1F1164810030B258 /* Debug */,
-				415FBC5E1F1164810030B258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
