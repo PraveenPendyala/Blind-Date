@@ -7,8 +7,25 @@
 //
 
 class User {
+    
+    // MARK: -
+    // MARK: Properties
+    
     var facebookId = ""
     var gender     = ""
     var name       = ""
     var profilePic = ""
+    var location   = ""
+    
+    
+    // MARK: -
+    // MARK: Init
+    
+    init(dict: [String: Any]) {
+        facebookId = dict["facebookId"] as? String ?? ""
+        gender     = dict["gender"] as? String ?? ""
+        name       = dict["name"] as? String ?? ""
+        profilePic = dict["profilePic"] as? String ?? ""
+        location   = dict["location"] as? String ?? ""
+    }
 }

@@ -14,6 +14,7 @@
 		415FBC3C1F1164810030B258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC3A1F1164810030B258 /* LaunchScreen.storyboard */; };
 		415FBC471F1164810030B258 /* Blind_DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC461F1164810030B258 /* Blind_DateTests.swift */; };
 		415FBC521F1164810030B258 /* Blind_DateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC511F1164810030B258 /* Blind_DateUITests.swift */; };
+		417F34E01F5DD1AB00874C7B /* ChatUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */; };
 		41ABDFDC1F4A272600940CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */; };
 		41B0E0041F4CF44500D45AF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0E0031F4CF44500D45AF3 /* User.swift */; };
 		41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */; };
@@ -57,6 +58,7 @@
 		415FBC4D1F1164810030B258 /* Blind DateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blind DateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		415FBC511F1164810030B258 /* Blind_DateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind_DateUITests.swift; sourceTree = "<group>"; };
 		415FBC531F1164810030B258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatUserTableViewController.swift; sourceTree = "<group>"; };
 		41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		41B0E0031F4CF44500D45AF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatUserTableViewCell.xib; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				41B0E0021F4CF42200D45AF3 /* Models */,
 				415FBC311F1164810030B258 /* AppDelegate.swift */,
 				415FBC331F1164810030B258 /* LoginViewController.swift */,
+				417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */,
 				415FBC351F1164810030B258 /* Main.storyboard */,
 				415FBC381F1164810030B258 /* Assets.xcassets */,
 				415FBC3A1F1164810030B258 /* LaunchScreen.storyboard */,
@@ -504,6 +507,7 @@
 			files = (
 				415FBC341F1164810030B258 /* LoginViewController.swift in Sources */,
 				415FBC321F1164810030B258 /* AppDelegate.swift in Sources */,
+				417F34E01F5DD1AB00874C7B /* ChatUserTableViewController.swift in Sources */,
 				41B0E0041F4CF44500D45AF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

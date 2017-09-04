@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat User Table View Controller-->
         <scene sceneID="4Ul-Qo-5Wd">
             <objects>
-                <viewController id="sT6-6E-z9h" sceneMemberID="viewController">
+                <viewController id="sT6-6E-z9h" customClass="ChatUserTableViewController" customModule="Blind_Date" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LSh-7Y-U20"/>
                         <viewControllerLayoutGuide type="bottom" id="Hw0-m9-rYA"/>
@@ -52,6 +52,9 @@
                             <constraint firstItem="Hw0-m9-rYA" firstAttribute="top" secondItem="yMf-ib-DXl" secondAttribute="bottom" id="ieP-xw-Rzf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="yMf-ib-DXl" id="Cd8-tL-uge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ebs-LP-LIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
