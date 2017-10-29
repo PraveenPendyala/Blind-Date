@@ -10,11 +10,23 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import CoreLocation
 
 final class LoginViewController: UIViewController {
 
+    
+    // MARK: -
+    // MARK: Properties
+    
+    private let locationManager = CLLocationManager()
+    private var postalCode      = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view, typically from a nib.
         let loginButton = FBSDKLoginButton()
         loginButton.center = self.view.center
@@ -48,13 +60,54 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                     return
                 }
                 // User is signed in
-                // ...
+                self.getFBUserData()
             }
         }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         
+    }
+    
+    private func getFBUserData() {
+        // Create request for user's Facebook data
+        let parameters = ["fields": "id, gender, name, picture"]
+        let request    = FBSDKGraphRequest(graphPath:"me", parameters:parameters)
+        let connection = FBSDKGraphRequestConnection()
+        connection.add(request) { (connection, result, error) in
+            if error != nil {
+                // Some error checking here
+            }
+            else if let userData = result as? [String:Any] {
+                let user = User(userData, self.postalCode)
+            }
+        }
+        connection.start()
+    }
+}
+
+
+// MARK: -
+// MARK: CLLocationManager Delegate
+
+extension LoginViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = manager.location else { return }
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error)-> Void in
+            if error != nil {
+                print("Reverse geocoder failed with error: \(error?.localizedDescription ?? "")")
+                return
+            }
+            
+            if let placemarks = placemarks, placemarks.count > 0 {
+                self.locationManager.stopUpdatingLocation()
+                self.postalCode = placemarks[0].postalCode ?? ""
+                print("Postal code updated to: \(self.postalCode)")
+            }else{
+                print("No placemarks found.")
+            }
+        })
     }
 }
 

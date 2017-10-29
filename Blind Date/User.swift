@@ -6,7 +6,7 @@
 //  Copyright © 2017 Praveen Pendyala. All rights reserved.
 //
 
-class User {
+struct User: Codable {
     
     // MARK: -
     // MARK: Properties
@@ -21,11 +21,14 @@ class User {
     // MARK: -
     // MARK: Init
     
-    init(dict: [String: Any]) {
-        facebookId = dict["facebookId"] as? String ?? ""
+    init(_ dict: [String: Any], _ postalCode: String) {
+        facebookId = dict["id"] as? String ?? ""
         gender     = dict["gender"] as? String ?? ""
         name       = dict["name"] as? String ?? ""
-        profilePic = dict["profilePic"] as? String ?? ""
-        location   = dict["location"] as? String ?? ""
+        if let pictureDict = dict["picture"] as? [String: Any],
+        let dataDict = pictureDict["data"] as? [String: Any] {
+            self.profilePic = dataDict["url"] as? String ?? ""
+        }
+        location   = postalCode
     }
 }

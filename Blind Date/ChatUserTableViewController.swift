@@ -41,7 +41,7 @@ class ChatUserTableViewController: UIViewController {
     private func observeUsers() {
         userRefHandle = userRef.observe(.childAdded, with: { (snapshot) in
             if let userData = snapshot.value as? [String: Any] {
-                self.users.append(User(dict: userData))
+//                self.users.append()
                 self.tableView.reloadData()
             }else {
                 print("Error! Could not decode user data")
