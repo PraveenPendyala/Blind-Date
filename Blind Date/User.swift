@@ -11,11 +11,11 @@ struct User: Codable {
     // MARK: -
     // MARK: Properties
     
-    var facebookId = ""
-    var gender     = ""
-    var name       = ""
-    var profilePic = ""
-    var location   = ""
+    private var facebookId = ""
+    private var gender     = ""
+    private var name       = ""
+    private var profilePic = ""
+    private var location   = ""
     
     
     // MARK: -
@@ -30,5 +30,17 @@ struct User: Codable {
             self.profilePic = dataDict["url"] as? String ?? ""
         }
         location   = postalCode
+    }
+    
+    
+    // MARK: -
+    // MARK: Public Methods
+    
+    func getFirebaseDict() -> Any {
+        return [ "facebookId" : self.facebookId,
+                 "gender" : self.gender,
+                 "name" : self.name,
+                 "profilePic" : self.profilePic,
+                 "location" : self.location]
     }
 }

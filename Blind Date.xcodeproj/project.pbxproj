@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41009D431F5E119A008CA7D0 /* ChatUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41009D421F5E119A008CA7D0 /* ChatUserTableViewCell.swift */; };
+		414C73B31FAE9F50008C385C /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C73B21FAE9F50008C385C /* FireBaseManager.swift */; };
 		415FBC321F1164810030B258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC311F1164810030B258 /* AppDelegate.swift */; };
 		415FBC341F1164810030B258 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FBC331F1164810030B258 /* LoginViewController.swift */; };
 		415FBC371F1164810030B258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415FBC351F1164810030B258 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		2748AB8AFDD6247B9D9FB9D3 /* Pods-Blind Date.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind Date.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blind Date/Pods-Blind Date.release.xcconfig"; sourceTree = "<group>"; };
 		2E621AF7A5306FF5C4C990C2 /* Pods-Blind DateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateUITests/Pods-Blind DateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		41009D421F5E119A008CA7D0 /* ChatUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserTableViewCell.swift; sourceTree = "<group>"; };
+		414C73B21FAE9F50008C385C /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		415FBC2E1F1164810030B258 /* Blind Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blind Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		415FBC311F1164810030B258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		415FBC331F1164810030B258 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		414C73B01FAE9EA9008C385C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				414C73B21FAE9F50008C385C /* FireBaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		415FBC251F1164810030B258 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		415FBC301F1164810030B258 /* Blind Date */ = {
 			isa = PBXGroup;
 			children = (
+				414C73B01FAE9EA9008C385C /* Managers */,
 				41B0E0051F4CFAC100D45AF3 /* TableViewCells */,
 				41B0E0021F4CF42200D45AF3 /* Models */,
 				415FBC311F1164810030B258 /* AppDelegate.swift */,
@@ -280,6 +291,7 @@
 			files = (
 				415FBC341F1164810030B258 /* LoginViewController.swift in Sources */,
 				415FBC321F1164810030B258 /* AppDelegate.swift in Sources */,
+				414C73B31FAE9F50008C385C /* FireBaseManager.swift in Sources */,
 				417F34E01F5DD1AB00874C7B /* ChatUserTableViewController.swift in Sources */,
 				41009D431F5E119A008CA7D0 /* ChatUserTableViewCell.swift in Sources */,
 				41B0E0041F4CF44500D45AF3 /* User.swift in Sources */,

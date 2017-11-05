@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class ChatUserTableViewController: UIViewController {
     
@@ -15,8 +14,6 @@ class ChatUserTableViewController: UIViewController {
     // MARK: -
     // MARK: Properties
     
-    private lazy var userRef  : DatabaseReference = Database.database().reference().child("users")
-    private var userRefHandle : DatabaseHandle?
     private var users                             = [User]()
     
     
@@ -39,7 +36,7 @@ class ChatUserTableViewController: UIViewController {
     // MARK: Private Methods
     
     private func observeUsers() {
-        userRefHandle = userRef.observe(.childAdded, with: { (snapshot) in
+        FirebaseManager.shared.userRef.observe(.childAdded, with: { (snapshot) in
             if let userData = snapshot.value as? [String: Any] {
 //                self.users.append()
                 self.tableView.reloadData()

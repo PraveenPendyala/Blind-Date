@@ -66,7 +66,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
+        FirebaseManager.dispose()
     }
     
     private func getFBUserData() {
@@ -80,6 +80,10 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             }
             else if let userData = result as? [String:Any] {
                 let user = User(userData, self.postalCode)
+                if let firebaseId = Auth.auth().currentUser?.uid {
+                    FirebaseManager.shared.userRef.setValue(user.getFirebaseDict(), forKey: firebaseId)
+                    self.performSegue(withIdentifier: "CharUserTVC", sender: self)
+                }
             }
         }
         connection.start()
