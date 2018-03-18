@@ -6,6 +6,8 @@
 //  Copyright © 2017 Praveen Pendyala. All rights reserved.
 //
 
+import Foundation
+
 struct User: Codable {
     
     // MARK: -
@@ -36,7 +38,7 @@ struct User: Codable {
     // MARK: -
     // MARK: Public Methods
     
-    func getFirebaseDict() -> Any {
+    func getFirebaseDict() -> NSDictionary {
         return [ "facebookId" : self.facebookId,
                  "gender" : self.gender,
                  "name" : self.name,

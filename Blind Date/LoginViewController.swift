@@ -81,8 +81,8 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             else if let userData = result as? [String:Any] {
                 let user = User(userData, self.postalCode)
                 if let firebaseId = Auth.auth().currentUser?.uid {
-                    FirebaseManager.shared.userRef.setValue(user.getFirebaseDict(), forKey: firebaseId)
-                    self.performSegue(withIdentifier: "CharUserTVC", sender: self)
+                    FirebaseManager.shared.userRef.child("\(firebaseId)").setValue(user.getFirebaseDict())
+                    self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
                 }
             }
         }
@@ -105,13 +105,18 @@ extension LoginViewController: CLLocationManagerDelegate {
             }
             
             if let placemarks = placemarks, placemarks.count > 0 {
-                self.locationManager.stopUpdatingLocation()
                 self.postalCode = placemarks[0].postalCode ?? ""
-                print("Postal code updated to: \(self.postalCode)")
+                if let firebaseId = Auth.auth().currentUser?.uid {
+                    FirebaseManager.shared.userRef.child("\(firebaseId)/location").setValue("\(self.postalCode)")
+                }
             }else{
                 print("No placemarks found.")
             }
         })
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 }
 
