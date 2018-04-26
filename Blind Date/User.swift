@@ -7,23 +7,28 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct User: Codable {
     
     // MARK: -
     // MARK: Properties
     
-    private var facebookId = ""
-    private var gender     = ""
-    private var name       = ""
-    private var profilePic = ""
-    private var location   = ""
+    private var city         = ""
+    private var country      = ""
+    private var facebookId   = ""
+    private var gender       = ""
+    private var interestedIn = ""
+    private var name         = ""
+    private var profilePic   = ""
+    private var state        = ""
+    private var zip          = ""
     
     
     // MARK: -
     // MARK: Init
     
-    init(_ dict: [String: Any], _ postalCode: String) {
+    init(_ dict: [String: Any], _ placemark: CLPlacemark?) {
         facebookId = dict["id"] as? String ?? ""
         gender     = dict["gender"] as? String ?? ""
         name       = dict["name"] as? String ?? ""
@@ -31,7 +36,10 @@ struct User: Codable {
         let dataDict = pictureDict["data"] as? [String: Any] {
             self.profilePic = dataDict["url"] as? String ?? ""
         }
-        location   = postalCode
+        zip     = placemark?.postalCode ?? ""
+        city    = placemark?.locality ?? ""
+        country = placemark?.country ?? ""
+        state   = placemark?.administrativeArea ?? ""
     }
     
     
@@ -39,10 +47,15 @@ struct User: Codable {
     // MARK: Public Methods
     
     func getFirebaseDict() -> NSDictionary {
-        return [ "facebookId" : self.facebookId,
+        return [ "city": self.city,
+                 "country": self.country,
+                 "facebookId" : self.facebookId,
                  "gender" : self.gender,
+                 "interestedIn" : "",
                  "name" : self.name,
                  "profilePic" : self.profilePic,
-                 "location" : self.location]
+                 "state" : self.state,
+                 "zip" : self.zip,
+                  ]
     }
 }

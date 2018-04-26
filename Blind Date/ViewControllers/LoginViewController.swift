@@ -19,7 +19,7 @@ final class LoginViewController: UIViewController {
     // MARK: Properties
     
     private let locationManager = CLLocationManager()
-    private var postalCode      = ""
+    private var placeMark : CLPlacemark?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +79,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                 // Some error checking here
             }
             else if let userData = result as? [String:Any] {
-                let user = User(userData, self.postalCode)
+                let user = User(userData, self.placeMark)
                 if let firebaseId = Auth.auth().currentUser?.uid {
                     FirebaseManager.shared.userRef.child("\(firebaseId)").setValue(user.getFirebaseDict())
                     self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
@@ -104,10 +104,13 @@ extension LoginViewController: CLLocationManagerDelegate {
                 return
             }
             
-            if let placemarks = placemarks, placemarks.count > 0 {
-                self.postalCode = placemarks[0].postalCode ?? ""
+            if let placemark = placemarks?.first {
+                self.placeMark = placemark
                 if let firebaseId = Auth.auth().currentUser?.uid {
-                    FirebaseManager.shared.userRef.child("\(firebaseId)/location").setValue("\(self.postalCode)")
+                    FirebaseManager.shared.userRef.child("\(firebaseId)/zip").setValue("\(self.placeMark?.postalCode ?? "")")
+                    FirebaseManager.shared.userRef.child("\(firebaseId)/city").setValue("\(self.placeMark?.locality ?? "")")
+                    FirebaseManager.shared.userRef.child("\(firebaseId)/country").setValue("\(self.placeMark?.country ?? "")")
+                    FirebaseManager.shared.userRef.child("\(firebaseId)/state").setValue("\(self.placeMark?.administrativeArea ?? "")")
                 }
             }else{
                 print("No placemarks found.")

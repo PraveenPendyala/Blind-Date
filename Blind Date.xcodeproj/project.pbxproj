@@ -18,6 +18,7 @@
 		41ABDFDC1F4A272600940CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */; };
 		41B0E0041F4CF44500D45AF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0E0031F4CF44500D45AF3 /* User.swift */; };
 		41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */; };
+		ACC567ED2091956D0061003C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC567EC2091956D0061003C /* UsersViewController.swift */; };
 		B9672248A6BFF20ADCB7CA94 /* Pods_Blind_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17216CAB09CCC326E3E122 /* Pods_Blind_Date.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		5D10069C1AB99FCF64824529 /* Pods-Blind Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blind Date/Pods-Blind Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8C675CC67EE1A48A832F298A /* Pods_Blind_DateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blind_DateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE906FD488B8731063EE74C /* Pods-Blind DateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateUITests/Pods-Blind DateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ACC567EC2091956D0061003C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		E4B20845E05D44C624F3825C /* Pods-Blind DateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateTests/Pods-Blind DateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED17216CAB09CCC326E3E122 /* Pods_Blind_Date.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blind_Date.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,12 +102,11 @@
 		415FBC301F1164810030B258 /* Blind Date */ = {
 			isa = PBXGroup;
 			children = (
+				ACC567EB209194F90061003C /* ViewControllers */,
 				414C73B01FAE9EA9008C385C /* Managers */,
 				41B0E0051F4CFAC100D45AF3 /* TableViewCells */,
 				41B0E0021F4CF42200D45AF3 /* Models */,
 				415FBC311F1164810030B258 /* AppDelegate.swift */,
-				415FBC331F1164810030B258 /* LoginViewController.swift */,
-				417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */,
 				415FBC351F1164810030B258 /* Main.storyboard */,
 				415FBC381F1164810030B258 /* Assets.xcassets */,
 				415FBC3A1F1164810030B258 /* LaunchScreen.storyboard */,
@@ -140,6 +141,16 @@
 				198CBA203733407E9BBC8673 /* Pods_Blind_DateUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACC567EB209194F90061003C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				415FBC331F1164810030B258 /* LoginViewController.swift */,
+				417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */,
+				ACC567EC2091956D0061003C /* UsersViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				415FBC341F1164810030B258 /* LoginViewController.swift in Sources */,
 				415FBC321F1164810030B258 /* AppDelegate.swift in Sources */,
 				414C73B31FAE9F50008C385C /* FireBaseManager.swift in Sources */,
+				ACC567ED2091956D0061003C /* UsersViewController.swift in Sources */,
 				417F34E01F5DD1AB00874C7B /* ChatUserTableViewController.swift in Sources */,
 				41009D431F5E119A008CA7D0 /* ChatUserTableViewCell.swift in Sources */,
 				41B0E0041F4CF44500D45AF3 /* User.swift in Sources */,
