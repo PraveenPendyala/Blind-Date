@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 struct User: Codable {
     
@@ -28,7 +27,7 @@ struct User: Codable {
     // MARK: -
     // MARK: Init
     
-    init(_ dict: [String: Any], _ placemark: CLPlacemark?) {
+    init(_ dict: [String: Any]) {
         facebookId = dict["id"] as? String ?? ""
         gender     = dict["gender"] as? String ?? ""
         name       = dict["name"] as? String ?? ""
@@ -36,26 +35,16 @@ struct User: Codable {
         let dataDict = pictureDict["data"] as? [String: Any] {
             self.profilePic = dataDict["url"] as? String ?? ""
         }
-        zip     = placemark?.postalCode ?? ""
-        city    = placemark?.locality ?? ""
-        country = placemark?.country ?? ""
-        state   = placemark?.administrativeArea ?? ""
     }
     
     
     // MARK: -
     // MARK: Public Methods
     
-    func getFirebaseDict() -> NSDictionary {
-        return [ "city": self.city,
-                 "country": self.country,
-                 "facebookId" : self.facebookId,
-                 "gender" : self.gender,
-                 "interestedIn" : "",
-                 "name" : self.name,
-                 "profilePic" : self.profilePic,
-                 "state" : self.state,
-                 "zip" : self.zip,
-                  ]
+    func getFirebaseDict() -> [AnyHashable: Any] {
+        return ["facebookId" : self.facebookId,
+                    "gender" : self.gender,
+                      "name" : self.name,
+                "profilePic" : self.profilePic]
     }
 }

@@ -19,7 +19,6 @@ final class LoginViewController: UIViewController {
     // MARK: Properties
     
     private let locationManager = CLLocationManager()
-    private var placeMark : CLPlacemark?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,9 +78,9 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                 // Some error checking here
             }
             else if let userData = result as? [String:Any] {
-                let user = User(userData, self.placeMark)
+                let user = User(userData)
                 if let firebaseId = Auth.auth().currentUser?.uid {
-                    FirebaseManager.shared.userRef.child("\(firebaseId)").setValue(user.getFirebaseDict())
+                    FirebaseManager.shared.userRef.child("\(firebaseId)").updateChildValues(user.getFirebaseDict())
                     self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
                 }
             }
@@ -104,14 +103,8 @@ extension LoginViewController: CLLocationManagerDelegate {
                 return
             }
             
-            if let placemark = placemarks?.first {
-                self.placeMark = placemark
-                if let firebaseId = Auth.auth().currentUser?.uid {
-                    FirebaseManager.shared.userRef.child("\(firebaseId)/zip").setValue("\(self.placeMark?.postalCode ?? "")")
-                    FirebaseManager.shared.userRef.child("\(firebaseId)/city").setValue("\(self.placeMark?.locality ?? "")")
-                    FirebaseManager.shared.userRef.child("\(firebaseId)/country").setValue("\(self.placeMark?.country ?? "")")
-                    FirebaseManager.shared.userRef.child("\(firebaseId)/state").setValue("\(self.placeMark?.administrativeArea ?? "")")
-                }
+            if let placemark = placemarks?.first, let firebaseId = Auth.auth().currentUser?.uid {
+                FirebaseManager.shared.userRef.child("\(firebaseId)").updateChildValues(placemark.getFirebaseDict())
             }else{
                 print("No placemarks found.")
             }
