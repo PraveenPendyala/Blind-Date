@@ -32,11 +32,26 @@ final class LoginViewController: UIViewController {
         self.view.addSubview(loginButton)
         loginButton.delegate = self
         FBSDKProfile.enableUpdates(onAccessTokenChange: true)
+        self.getFBProfile()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    // MARK: -
+    // MARK: Private Methods
+    
+    private func getFBProfile() {
+        FBSDKProfile.loadCurrentProfile { (fbProfile, error) in
+            if let id = Auth.auth().currentUser?.uid, let profile = fbProfile {
+                let user = User(profile)
+                FirebaseManager.shared.userRef.child(id).updateChildValues(user.getFirebaseDict())
+                self.checkIfInteresedIn()
+            }
+        }
     }
 }
 
@@ -59,6 +74,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                     return
                 }
                 // User is signed in
+                self.getFBProfile()
                 self.getFBUserData()
             }
         }
@@ -68,21 +84,42 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
         FirebaseManager.dispose()
     }
     
+    private func checkIfInteresedIn() {
+        FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)").observeSingleEvent(of: .value) { (user) in
+            if !user.hasChild("interestedIn") {
+                let alert = UIAlertController(title: nil, message: "Are you interested in male or female?", preferredStyle: .alert)
+                let maleAction = UIAlertAction(title: "MALE", style: .default, handler: { (_) in
+                    self.updateIsInterestedIn(gender: "male")
+                })
+                let femaleAction = UIAlertAction(title: "FEMALE", style: .default, handler: { (_) in
+                    self.updateIsInterestedIn(gender: "female")
+                })
+                alert.addAction(maleAction)
+                alert.addAction(femaleAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+            else {
+                self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
+            }
+        }
+    }
+    
+    private func updateIsInterestedIn(gender: String) {
+        FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)/interestedIn").setValue(gender)
+        self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
+    }
+    
     private func getFBUserData() {
         // Create request for user's Facebook data
-        let parameters = ["fields": "id, gender, name, picture"]
+        let parameters = ["fields": "gender,picture"]
         let request    = FBSDKGraphRequest(graphPath:"me", parameters:parameters)
         let connection = FBSDKGraphRequestConnection()
         connection.add(request) { (connection, result, error) in
             if error != nil {
                 // Some error checking here
             }
-            else if let userData = result as? [String:Any] {
-                let user = User(userData)
-                if let firebaseId = Auth.auth().currentUser?.uid {
-                    FirebaseManager.shared.userRef.child("\(firebaseId)").updateChildValues(user.getFirebaseDict())
-                    self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
-                }
+            else if let userData = result as? [String:Any], let gender = userData["gender"] {
+                FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)/gender").setValue(gender)
             }
         }
         connection.start()

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FBSDKCoreKit
 
 struct User: Codable {
     
@@ -27,14 +28,10 @@ struct User: Codable {
     // MARK: -
     // MARK: Init
     
-    init(_ dict: [String: Any]) {
-        facebookId = dict["id"] as? String ?? ""
-        gender     = dict["gender"] as? String ?? ""
-        name       = dict["name"] as? String ?? ""
-        if let pictureDict = dict["picture"] as? [String: Any],
-        let dataDict = pictureDict["data"] as? [String: Any] {
-            self.profilePic = dataDict["url"] as? String ?? ""
-        }
+    init(_ fbProfile: FBSDKProfile) {
+        facebookId = fbProfile.userID
+        name       = fbProfile.name
+        profilePic = fbProfile.imageURL(for: FBSDKProfilePictureMode.normal, size: UIScreen.main.bounds.size).absoluteString
     }
     
     
@@ -43,7 +40,6 @@ struct User: Codable {
     
     func getFirebaseDict() -> [AnyHashable: Any] {
         return ["facebookId" : self.facebookId,
-                    "gender" : self.gender,
                       "name" : self.name,
                 "profilePic" : self.profilePic]
     }
