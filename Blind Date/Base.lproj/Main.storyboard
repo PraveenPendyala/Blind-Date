@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1604" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Users View Controller-->
         <scene sceneID="heW-Wd-rrp">
             <objects>
-                <viewController id="1fV-xH-Go5" sceneMemberID="viewController">
+                <viewController id="1fV-xH-Go5" customClass="UsersViewController" customModule="Blind_Date" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CsS-Yc-sJd"/>
                         <viewControllerLayoutGuide type="bottom" id="NxX-UD-fkT"/>
@@ -102,6 +102,9 @@
                                         <state key="normal" title="PREVIOUS">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="previousButtonTapped:" destination="1fV-xH-Go5" eventType="touchUpInside" id="dCk-k1-BUZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5P-UQ-Rm1">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
@@ -110,6 +113,9 @@
                                         <state key="normal" title="NEXT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="1fV-xH-Go5" eventType="touchUpInside" id="KAR-g5-Uag"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,6 +168,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9j6-ko-E5a"/>
+                    <connections>
+                        <outlet property="usersCollectionView" destination="Q2D-Kg-T8m" id="APE-G2-X2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rio-lY-Grd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

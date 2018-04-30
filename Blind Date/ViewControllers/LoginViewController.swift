@@ -111,7 +111,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
     
     private func getFBUserData() {
         // Create request for user's Facebook data
-        let parameters = ["fields": "gender,picture"]
+        let parameters = ["fields": "gender,birthday"]
         let request    = FBSDKGraphRequest(graphPath:"me", parameters:parameters)
         let connection = FBSDKGraphRequestConnection()
         connection.add(request) { (connection, result, error) in

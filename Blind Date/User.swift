@@ -14,12 +14,12 @@ struct User: Codable {
     // MARK: -
     // MARK: Properties
     
-    private var city         = ""
+    var city                 = ""
     private var country      = ""
     private var facebookId   = ""
     private var gender       = ""
     private var interestedIn = ""
-    private var name         = ""
+    var name                 = ""
     private var profilePic   = ""
     private var state        = ""
     private var zip          = ""

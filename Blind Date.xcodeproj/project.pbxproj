@@ -18,6 +18,8 @@
 		41ABDFDC1F4A272600940CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41ABDFDB1F4A272600940CDF /* GoogleService-Info.plist */; };
 		41B0E0041F4CF44500D45AF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0E0031F4CF44500D45AF3 /* User.swift */; };
 		41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */; };
+		AC4D1A8D20965FE10022DA1C /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4D1A8C20965FE10022DA1C /* UserCollectionViewCell.xib */; };
+		AC4D1A8F20966E850022DA1C /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4D1A8E20966E850022DA1C /* UserCollectionViewCell.swift */; };
 		AC67FA8D2092E6D4003BC199 /* CLPlacemark+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67FA8C2092E6D4003BC199 /* CLPlacemark+Extension.swift */; };
 		ACC567ED2091956D0061003C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC567EC2091956D0061003C /* UsersViewController.swift */; };
 		B9672248A6BFF20ADCB7CA94 /* Pods_Blind_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17216CAB09CCC326E3E122 /* Pods_Blind_Date.framework */; };
@@ -44,6 +46,8 @@
 		5D10069C1AB99FCF64824529 /* Pods-Blind Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blind Date/Pods-Blind Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8C675CC67EE1A48A832F298A /* Pods_Blind_DateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blind_DateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE906FD488B8731063EE74C /* Pods-Blind DateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateUITests/Pods-Blind DateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC4D1A8C20965FE10022DA1C /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
+		AC4D1A8E20966E850022DA1C /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC67FA8C2092E6D4003BC199 /* CLPlacemark+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+Extension.swift"; sourceTree = "<group>"; };
 		ACC567EC2091956D0061003C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		E4B20845E05D44C624F3825C /* Pods-Blind DateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateTests/Pods-Blind DateTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		415FBC301F1164810030B258 /* Blind Date */ = {
 			isa = PBXGroup;
 			children = (
+				AC4D1A8B20965F490022DA1C /* CollectionViewCells */,
 				AC67FA8B2092E68D003BC199 /* Extensions */,
 				ACC567EB209194F90061003C /* ViewControllers */,
 				414C73B01FAE9EA9008C385C /* Managers */,
@@ -144,6 +149,15 @@
 				198CBA203733407E9BBC8673 /* Pods_Blind_DateUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC4D1A8B20965F490022DA1C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AC4D1A8C20965FE10022DA1C /* UserCollectionViewCell.xib */,
+				AC4D1A8E20966E850022DA1C /* UserCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		AC67FA8B2092E68D003BC199 /* Extensions */ = {
@@ -231,6 +245,7 @@
 				415FBC3C1F1164810030B258 /* LaunchScreen.storyboard in Resources */,
 				41ABDFDC1F4A272600940CDF /* GoogleService-Info.plist in Resources */,
 				41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */,
+				AC4D1A8D20965FE10022DA1C /* UserCollectionViewCell.xib in Resources */,
 				415FBC391F1164810030B258 /* Assets.xcassets in Resources */,
 				415FBC371F1164810030B258 /* Main.storyboard in Resources */,
 			);
@@ -317,6 +332,7 @@
 				ACC567ED2091956D0061003C /* UsersViewController.swift in Sources */,
 				417F34E01F5DD1AB00874C7B /* ChatUserTableViewController.swift in Sources */,
 				AC67FA8D2092E6D4003BC199 /* CLPlacemark+Extension.swift in Sources */,
+				AC4D1A8F20966E850022DA1C /* UserCollectionViewCell.swift in Sources */,
 				41009D431F5E119A008CA7D0 /* ChatUserTableViewCell.swift in Sources */,
 				41B0E0041F4CF44500D45AF3 /* User.swift in Sources */,
 			);
