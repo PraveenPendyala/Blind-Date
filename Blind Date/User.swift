@@ -16,7 +16,7 @@ struct User: Codable {
     
     var city                 = ""
     private var country      = ""
-    private var facebookId   = ""
+    var facebookId           = ""
     private var gender       = ""
     private var interestedIn = ""
     var name                 = ""
@@ -32,6 +32,12 @@ struct User: Codable {
         facebookId = fbProfile.userID
         name       = fbProfile.name
         profilePic = fbProfile.imageURL(for: FBSDKProfilePictureMode.normal, size: UIScreen.main.bounds.size).absoluteString
+    }
+    
+    init(_ dict: [String: Any]) {
+        self.city       = dict["city"] as? String ?? ""
+        self.name       = dict["name"] as? String ?? ""
+        self.facebookId = dict["facebookId"] as? String ?? ""
     }
     
     

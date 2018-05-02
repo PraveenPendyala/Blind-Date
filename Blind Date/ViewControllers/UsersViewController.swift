@@ -40,7 +40,12 @@ final class UsersViewController: UIViewController {
         self.usersCollectionView.delegate   = self
         self.usersCollectionView.dataSource = self
         self.usersCollectionView.register(UINib(nibName: "UserCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UserCollectionViewCell")
-        FirebaseManager.shared.userRef.obs
+        FirebaseManager.shared.userRef.observe(.value) { (data) in
+            if let users = data.value as? [String: [String: Any]] {
+                self.users = users.map({ User($0.value)})
+                self.usersCollectionView.reloadData()
+            }
+        }
     }
 }
 
@@ -48,13 +53,18 @@ final class UsersViewController: UIViewController {
 // MARK: -
 // MARK: UICollectionView Datasource & Delegate
 
-extension UsersViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension UsersViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return self.users.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
+        cell.configure(self.users[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return collectionView.bounds.size
     }
 }
