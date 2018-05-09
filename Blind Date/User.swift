@@ -20,7 +20,7 @@ struct User: Codable {
     private var gender       = ""
     private var interestedIn = ""
     var name                 = ""
-    private var profilePic   = ""
+    var profilePic           = ""
     private var state        = ""
     private var zip          = ""
     
@@ -37,6 +37,7 @@ struct User: Codable {
     init(_ dict: [String: Any]) {
         self.city       = dict["city"] as? String ?? ""
         self.name       = dict["name"] as? String ?? ""
+        self.profilePic = dict["profilePic"] as? String ?? ""
         self.facebookId = dict["facebookId"] as? String ?? ""
     }
     

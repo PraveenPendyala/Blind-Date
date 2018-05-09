@@ -6,7 +6,7 @@
 //  Copyright © 2018 Praveen Pendyala. All rights reserved.
 //
 
-import UIKit
+import Kingfisher
 
 final class UserCollectionViewCell: UICollectionViewCell {
     
@@ -25,5 +25,7 @@ final class UserCollectionViewCell: UICollectionViewCell {
     func configure(_ user: User) {
         self.nameLabel.text = user.name
         self.cityLabel.text = user.city
+        let url = URL(string: user.profilePic)
+        self.userImageView.kf.setImage(with: url)
     }
 }
