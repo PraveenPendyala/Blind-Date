@@ -19,21 +19,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="431" height="483"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DR6-Ng-Vgy">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DR6-Ng-Vgy">
                         <rect key="frame" x="0.0" y="0.0" width="431" height="483"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS8-hu-Ags">
                         <rect key="frame" x="20" y="442" width="44.5" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvT-Qu-8W2">
                         <rect key="frame" x="369" y="442" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="DR6-Ng-Vgy" firstAttribute="top" secondItem="9lV-RH-xnE" secondAttribute="top" id="UF4-T5-E2g"/>
                 <constraint firstAttribute="bottom" secondItem="jvT-Qu-8W2" secondAttribute="bottom" constant="20" id="X4j-hO-l1b"/>

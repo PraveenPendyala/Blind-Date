@@ -14,7 +14,8 @@ final class UsersViewController: UIViewController {
     // MARK: -
     // MARK: Properties
     
-    private var users = [User]()
+    private var users        = [User]()
+    private var currentIndex = 0
     
     // MARK: -
     // MARK: IBOutlets
@@ -26,9 +27,21 @@ final class UsersViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction func previousButtonTapped(_ sender: Any) {
+        if currentIndex > 0 {
+            currentIndex -= 1
+            self.usersCollectionView.scrollToItem(at: IndexPath(row: currentIndex, section: 0),
+                                                  at: .centeredHorizontally,
+                                            animated: true)
+        }
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        if currentIndex < self.users.count - 1 {
+            currentIndex += 1
+            self.usersCollectionView.scrollToItem(at: IndexPath(row: currentIndex, section: 0),
+                                                  at: .centeredHorizontally,
+                                            animated: true)
+        }
     }
     
     
@@ -37,8 +50,8 @@ final class UsersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.usersCollectionView.delegate   = self
-        self.usersCollectionView.dataSource = self
+        self.usersCollectionView.delegate        = self
+        self.usersCollectionView.dataSource      = self
         self.usersCollectionView.register(UINib(nibName: "UserCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UserCollectionViewCell")
         FirebaseManager.shared.userRef.observe(.value) { (data) in
             if let users = data.value as? [String: [String: Any]] {
