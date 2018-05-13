@@ -34,14 +34,25 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGY-8B-rMA">
+                        <rect key="frame" x="371" y="20" width="40" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="5Q4-nk-5bU"/>
+                            <constraint firstAttribute="width" constant="40" id="XJL-C7-IU5"/>
+                        </constraints>
+                        <state key="normal" image="chatIcon"/>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="CGY-8B-rMA" firstAttribute="top" secondItem="9lV-RH-xnE" secondAttribute="top" constant="20" id="1mf-8F-gK5"/>
                 <constraint firstItem="DR6-Ng-Vgy" firstAttribute="top" secondItem="9lV-RH-xnE" secondAttribute="top" id="UF4-T5-E2g"/>
                 <constraint firstAttribute="bottom" secondItem="jvT-Qu-8W2" secondAttribute="bottom" constant="20" id="X4j-hO-l1b"/>
                 <constraint firstAttribute="bottom" secondItem="DR6-Ng-Vgy" secondAttribute="bottom" id="XjO-Gr-PNo"/>
                 <constraint firstAttribute="bottom" secondItem="ZS8-hu-Ags" secondAttribute="bottom" constant="20" id="b6F-wN-bl1"/>
+                <constraint firstAttribute="trailing" secondItem="CGY-8B-rMA" secondAttribute="trailing" constant="20" id="fGi-u4-Ys4"/>
                 <constraint firstItem="ZS8-hu-Ags" firstAttribute="leading" secondItem="9lV-RH-xnE" secondAttribute="leading" constant="20" id="mES-8I-E50"/>
                 <constraint firstItem="DR6-Ng-Vgy" firstAttribute="leading" secondItem="9lV-RH-xnE" secondAttribute="leading" id="sMK-O4-loe"/>
                 <constraint firstAttribute="trailing" secondItem="DR6-Ng-Vgy" secondAttribute="trailing" id="wAm-Pd-bnC"/>
@@ -50,6 +61,7 @@
             <viewLayoutGuide key="safeArea" id="2R3-5g-chy"/>
             <size key="customSize" width="431" height="483"/>
             <connections>
+                <outlet property="chatButton" destination="CGY-8B-rMA" id="xVH-Qr-gzv"/>
                 <outlet property="cityLabel" destination="jvT-Qu-8W2" id="qBf-4L-OJh"/>
                 <outlet property="nameLabel" destination="ZS8-hu-Ags" id="8HU-VL-DDc"/>
                 <outlet property="userImageView" destination="DR6-Ng-Vgy" id="6Sw-ln-ezw"/>
@@ -57,4 +69,7 @@
             <point key="canvasLocation" x="21.5" y="88.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="chatIcon" width="24" height="24"/>
+    </resources>
 </document>

@@ -17,7 +17,17 @@ final class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var userImageView    : UIImageView!
     @IBOutlet private weak var nameLabel        : UILabel!
     @IBOutlet private weak var cityLabel        : UILabel!
+    @IBOutlet private weak var chatButton       : UIButton!
     
+    
+    // MARK: -
+    // MARK: Init
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.chatButton.layer.cornerRadius = self.chatButton.frame.width/2
+        self.chatButton.clipsToBounds      = true
+    }
     
     // MARK: -
     // MARK: Configure
