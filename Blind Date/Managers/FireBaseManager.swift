@@ -21,7 +21,8 @@ final class FirebaseManager {
         return sharedInstance!
     }
     
-    let userRef    = Database.database().reference().child("users")
+    let userRef       = Database.database().reference().child("users")
+    let messagesRef   = Database.database().reference().child("messages")
     
     // MARK: -
     // MARK: Init

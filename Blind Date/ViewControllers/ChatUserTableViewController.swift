@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class ChatUserTableViewController: UIViewController {
     
     
@@ -28,6 +28,7 @@ class ChatUserTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.observeUsers()
         self.tableView.register( UINib(nibName: "ChatUserTableViewCell", bundle: nil),
                         forCellReuseIdentifier: "ChatUserTableViewCell")
     }
@@ -36,14 +37,12 @@ class ChatUserTableViewController: UIViewController {
     // MARK: Private Methods
     
     private func observeUsers() {
-        FirebaseManager.shared.userRef.observe(.childAdded, with: { (snapshot) in
+        let userId = Auth.auth().currentUser!.uid
+        FirebaseManager.shared.messagesRef.queryOrdered(byChild: "users/\(userId)").queryEqual(toValue: true).observe(.childAdded) { (snapshot) in
             if let userData = snapshot.value as? [String: Any] {
-//                self.users.append()
-                self.tableView.reloadData()
-            }else {
-                print("Error! Could not decode user data")
+                print("\(userData)")
             }
-        })
+        }
     }
 }
 

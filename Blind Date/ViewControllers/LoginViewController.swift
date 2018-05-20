@@ -31,6 +31,7 @@ final class LoginViewController: UIViewController {
         loginButton.center = self.view.center
         self.view.addSubview(loginButton)
         loginButton.delegate = self
+        loginButton.readPermissions = ["user_gender","email"]
         FBSDKProfile.enableUpdates(onAccessTokenChange: true)
         self.getFBProfile()
     }
@@ -111,15 +112,16 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
     
     private func getFBUserData() {
         // Create request for user's Facebook data
-        let parameters = ["fields": "gender,birthday"]
+        let parameters = ["fields": "gender,email"]
         let request    = FBSDKGraphRequest(graphPath:"me", parameters:parameters)
         let connection = FBSDKGraphRequestConnection()
         connection.add(request) { (connection, result, error) in
             if error != nil {
                 // Some error checking here
             }
-            else if let userData = result as? [String:Any], let gender = userData["gender"] {
-                FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)/gender").setValue(gender)
+            else if var userData = result as? [String:Any] {
+                userData.removeValue(forKey: "id")
+                FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)").updateChildValues(userData)
             }
         }
         connection.start()

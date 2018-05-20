@@ -40,7 +40,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uBM-p0-ANd"/>
                     <connections>
-                        <segue destination="1fV-xH-Go5" kind="showDetail" identifier="ChatUserTVC" id="7wJ-iE-vtZ"/>
+                        <segue destination="1fV-xH-Go5" kind="show" identifier="ChatUserTVC" id="7wJ-iE-vtZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yMf-ib-DXl">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8t-8A-Eg2">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="573" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r3-2G-xBR">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
@@ -133,10 +133,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwX-MV-70m">
-                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="509"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q2D-Kg-T8m">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="D6O-nP-4YS">
                                             <size key="itemSize" width="50" height="50"/>
@@ -167,7 +167,15 @@
                             <constraint firstAttribute="trailing" secondItem="S8t-8A-Eg2" secondAttribute="trailing" id="u9R-kW-0U8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9j6-ko-E5a"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9j6-ko-E5a">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="XOX-kj-Emx">
+                            <connections>
+                                <segue destination="sT6-6E-z9h" kind="show" id="DrW-6U-Se4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="usersCollectionView" destination="Q2D-Kg-T8m" id="APE-G2-X2h"/>
                     </connections>
