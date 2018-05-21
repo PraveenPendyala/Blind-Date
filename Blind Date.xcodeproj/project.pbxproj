@@ -21,6 +21,7 @@
 		AC4D1A8D20965FE10022DA1C /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4D1A8C20965FE10022DA1C /* UserCollectionViewCell.xib */; };
 		AC4D1A8F20966E850022DA1C /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4D1A8E20966E850022DA1C /* UserCollectionViewCell.swift */; };
 		AC67FA8D2092E6D4003BC199 /* CLPlacemark+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67FA8C2092E6D4003BC199 /* CLPlacemark+Extension.swift */; };
+		ACBDA79920B2077E00A4D5F5 /* ChatUserTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBDA79820B2077E00A4D5F5 /* ChatUserTableViewModel.swift */; };
 		ACC567ED2091956D0061003C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC567EC2091956D0061003C /* UsersViewController.swift */; };
 		B9672248A6BFF20ADCB7CA94 /* Pods_Blind_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED17216CAB09CCC326E3E122 /* Pods_Blind_Date.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		AC4D1A8C20965FE10022DA1C /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		AC4D1A8E20966E850022DA1C /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC67FA8C2092E6D4003BC199 /* CLPlacemark+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+Extension.swift"; sourceTree = "<group>"; };
+		ACBDA79820B2077E00A4D5F5 /* ChatUserTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserTableViewModel.swift; sourceTree = "<group>"; };
 		ACC567EC2091956D0061003C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		E4B20845E05D44C624F3825C /* Pods-Blind DateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateTests/Pods-Blind DateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED17216CAB09CCC326E3E122 /* Pods_Blind_Date.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blind_Date.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 			children = (
 				41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */,
 				41009D421F5E119A008CA7D0 /* ChatUserTableViewCell.swift */,
+				ACBDA79820B2077E00A4D5F5 /* ChatUserTableViewModel.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				AC67FA8D2092E6D4003BC199 /* CLPlacemark+Extension.swift in Sources */,
 				AC4D1A8F20966E850022DA1C /* UserCollectionViewCell.swift in Sources */,
 				41009D431F5E119A008CA7D0 /* ChatUserTableViewCell.swift in Sources */,
+				ACBDA79920B2077E00A4D5F5 /* ChatUserTableViewModel.swift in Sources */,
 				41B0E0041F4CF44500D45AF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

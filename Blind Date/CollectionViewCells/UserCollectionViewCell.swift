@@ -36,6 +36,7 @@ final class UserCollectionViewCell: UICollectionViewCell {
         self.nameLabel.text = user.name
         self.cityLabel.text = user.city
         let url = URL(string: user.profilePic)
+        self.userImageView.kf.indicatorType = .activity
         self.userImageView.kf.setImage(with: url)
     }
 }

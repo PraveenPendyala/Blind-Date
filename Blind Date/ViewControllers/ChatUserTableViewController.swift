@@ -14,7 +14,7 @@ class ChatUserTableViewController: UIViewController {
     // MARK: -
     // MARK: Properties
     
-    private var users                             = [User]()
+    private var users                             = [ChatUserTableViewModel]()
     
     
     // MARK: -
@@ -38,9 +38,9 @@ class ChatUserTableViewController: UIViewController {
     
     private func observeUsers() {
         let userId = Auth.auth().currentUser!.uid
-        FirebaseManager.shared.messagesRef.queryOrdered(byChild: "users/\(userId)").queryEqual(toValue: true).observe(.childAdded) { (snapshot) in
-            if let userData = snapshot.value as? [String: Any] {
-                print("\(userData)")
+        FirebaseManager.shared.userRef.child("\(userId)/conversations").observe(.value) { (snapshot) in
+            if let convo = snapshot.value as? [String:Any] {
+                self.users = convo.map({ ChatUserTableViewModel($0.key) })
             }
         }
     }
@@ -57,7 +57,8 @@ extension ChatUserTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatUserTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatUserTableViewCell", for: indexPath) as! ChatUserTableViewCell
+        cell
         return cell
     }
 }
