@@ -12,7 +12,7 @@ protocol ChatUserTableViewCellDatasource: NSObjectProtocol {
     var convoId     : String { get }
     var userName    : String { get }
     var pictureUrl  : String { get }
-    func loadUserInfo(_ completion: () -> Void)
+    func loadUserInfo(_ completion: @escaping () -> Void)
 }
 
 class ChatUserTableViewCell: UITableViewCell {
@@ -22,6 +22,16 @@ class ChatUserTableViewCell: UITableViewCell {
     // MARK: Properties
     
     weak var delegate: ChatUserTableViewCellDatasource?
+    
+    
+    // MARK: -
+    // MARK: Init
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.userImageView.layer.cornerRadius   = self.userImageView.frame.height/2
+        self.userImageView.clipsToBounds        = true
+    }
     
     // MARK: -
     // MARK: IBOutlets

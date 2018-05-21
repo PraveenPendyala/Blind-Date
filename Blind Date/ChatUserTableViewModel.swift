@@ -30,7 +30,7 @@ final class ChatUserTableViewModel: NSObject, ChatUserTableViewCellDatasource {
     // MARK: -
     // MARK: Public Methods
     
-    func loadUserInfo(_ completion: () -> Void) {
+    func loadUserInfo(_ completion: @escaping () -> Void) {
         if !self.userName.isEmpty { return }
         let users = convoId.components(separatedBy: "_")
         let authId = Auth.auth().currentUser!.uid
@@ -41,6 +41,7 @@ final class ChatUserTableViewModel: NSObject, ChatUserTableViewCellDatasource {
                         let user = User(userDict)
                         self.userName   = user.name
                         self.pictureUrl = user.profilePic
+                        completion()
                     }
                 }
                 return

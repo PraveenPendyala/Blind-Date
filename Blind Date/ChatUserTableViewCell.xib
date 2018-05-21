@@ -12,24 +12,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="YEA-io-p1s" customClass="ChatUserTableViewCell" customModule="Blind_Date" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="YEA-io-p1s" customClass="ChatUserTableViewCell" customModule="Blind_Date" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YEA-io-p1s" id="mJk-uS-zKo">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZt-s5-5dB">
-                                <rect key="frame" x="107.5" y="39" width="252.5" height="21"/>
+                                <rect key="frame" x="84.5" y="27.5" width="275.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jVu-4f-hyG">
-                                <rect key="frame" x="15" y="10" width="77.5" height="77.5"/>
+                                <rect key="frame" x="15" y="10" width="54.5" height="54.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jVu-4f-hyG" secondAttribute="height" multiplier="1:1" id="zeq-zY-KNf"/>
                                 </constraints>
