@@ -100,14 +100,18 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                 self.present(alert, animated: true, completion: nil)
             }
             else {
-                self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
+                self.loadUsersVC()
             }
         }
     }
     
     private func updateIsInterestedIn(gender: String) {
         FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)/interestedIn").setValue(gender)
-        self.performSegue(withIdentifier: "ChatUserTVC", sender: self)
+        self.loadUsersVC()
+    }
+    
+    private func loadUsersVC() {
+        self.navigationController?.setViewControllers([UsersViewController.instantiateFromStoryboard()], animated: true)
     }
     
     private func getFBUserData() {

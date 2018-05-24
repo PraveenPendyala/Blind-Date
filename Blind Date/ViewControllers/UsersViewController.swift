@@ -81,3 +81,13 @@ extension UsersViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return collectionView.bounds.size
     }
 }
+
+
+// MARK: -
+// MARK: Storyboard Initializable
+
+extension UsersViewController: StoryboardInitializable {
+    static func instantiateFromStoryboard() -> UsersViewController {
+        return Storyboards.Main.instantiateViewController(withIdentifier: "UsersViewController") as! UsersViewController
+    }
+}
