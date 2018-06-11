@@ -15,4 +15,5 @@ target 'Blind Date' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'Kingfisher'
+  pod 'Chatto'
 end
