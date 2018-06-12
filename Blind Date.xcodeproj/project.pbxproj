@@ -20,6 +20,7 @@
 		41B0E0071F4CFAF800D45AF3 /* ChatUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0E0061F4CFAF800D45AF3 /* ChatUserTableViewCell.xib */; };
 		AC256DC720B67FA80022B435 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC256DC620B67FA80022B435 /* StoryboardConstants.swift */; };
 		AC256DC920B6835C0022B435 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC256DC820B6835C0022B435 /* Protocols.swift */; };
+		AC36F43520CF940000182B20 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC36F43420CF940000182B20 /* ChatViewController.swift */; };
 		AC4D1A8D20965FE10022DA1C /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4D1A8C20965FE10022DA1C /* UserCollectionViewCell.xib */; };
 		AC4D1A8F20966E850022DA1C /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4D1A8E20966E850022DA1C /* UserCollectionViewCell.swift */; };
 		AC67FA8D2092E6D4003BC199 /* CLPlacemark+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67FA8C2092E6D4003BC199 /* CLPlacemark+Extension.swift */; };
@@ -51,6 +52,7 @@
 		9DE906FD488B8731063EE74C /* Pods-Blind DateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blind DateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blind DateUITests/Pods-Blind DateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AC256DC620B67FA80022B435 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 		AC256DC820B6835C0022B435 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		AC36F43420CF940000182B20 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AC4D1A8C20965FE10022DA1C /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		AC4D1A8E20966E850022DA1C /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC67FA8C2092E6D4003BC199 /* CLPlacemark+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+Extension.swift"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				415FBC331F1164810030B258 /* LoginViewController.swift */,
 				417F34DF1F5DD1AB00874C7B /* ChatUserTableViewController.swift */,
 				ACC567EC2091956D0061003C /* UsersViewController.swift */,
+				AC36F43420CF940000182B20 /* ChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blind Date/Pods-Blind Date-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
+				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
@@ -284,6 +288,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
@@ -332,6 +337,7 @@
 				417F34E01F5DD1AB00874C7B /* ChatUserTableViewController.swift in Sources */,
 				AC67FA8D2092E6D4003BC199 /* CLPlacemark+Extension.swift in Sources */,
 				AC4D1A8F20966E850022DA1C /* UserCollectionViewCell.swift in Sources */,
+				AC36F43520CF940000182B20 /* ChatViewController.swift in Sources */,
 				41009D431F5E119A008CA7D0 /* ChatUserTableViewCell.swift in Sources */,
 				ACBDA79920B2077E00A4D5F5 /* ChatUserTableViewModel.swift in Sources */,
 				41B0E0041F4CF44500D45AF3 /* User.swift in Sources */,

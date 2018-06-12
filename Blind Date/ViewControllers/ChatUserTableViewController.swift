@@ -69,4 +69,9 @@ extension ChatUserTableViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatVC = ChatViewController()
+        self.navigationController?.pushViewController(chatVC, animated: true)
+    }
 }

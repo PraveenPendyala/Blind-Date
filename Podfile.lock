@@ -6,6 +6,8 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
   - Chatto (3.3.1)
+  - ChattoAdditions (3.3.1):
+    - Chatto
   - FBSDKCoreKit (4.25.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.25.0):
@@ -60,6 +62,7 @@ PODS:
 
 DEPENDENCIES:
   - Chatto
+  - ChattoAdditions
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -74,6 +77,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
     - Chatto
+    - ChattoAdditions
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
@@ -93,6 +97,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Chatto: 24a6c9b0c91b08130466888b8b61563b90191c6f
+  ChattoAdditions: cc74cd3dd371aa3f70e5ab8568a4f383f0c0eb8c
   FBSDKCoreKit: 53e3f4bfb64e80c5f229dd30ae33ff57fbbbd2d1
   FBSDKLoginKit: f628c09684dae9c17f071cf90b014e886f5093ea
   FBSDKShareKit: aea699d3cac749af08e360f4e949b82ffa8813f5
@@ -109,6 +114,6 @@ SPEC CHECKSUMS:
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
 
-PODFILE CHECKSUM: 61b31fb118d302e5e2096c289f994e3d040e451c
+PODFILE CHECKSUM: e82d74295fd0a276f38134193572cd35b73f56ff
 
 COCOAPODS: 1.5.3
