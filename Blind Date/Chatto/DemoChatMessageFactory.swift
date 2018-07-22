@@ -25,6 +25,7 @@
 import Foundation
 import Chatto
 import ChattoAdditions
+import Firebase
 
 class DemoChatMessageFactory {
     private static let demoText =
@@ -151,5 +152,13 @@ extension DemoChatMessageFactory {
 
     static func makeMessagesSelectionMessages() -> [MessageModelProtocol] {
         return self.messages(fromDemoMessages: self.messagesSelectionMessages)
+    }
+    
+    static func makeMessagesFor( _ conversationId: String) {
+        FirebaseManager.shared.messagesRef.child(conversationId).observeSingleEvent(of: .value) { (snapshot) in
+            if let messages = snapshot.value as? [String: Any] {
+                print("")
+            }
+        }
     }
 }

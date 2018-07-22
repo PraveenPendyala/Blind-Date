@@ -71,7 +71,9 @@ extension ChatUserTableViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let messages   = DemoChatMessageFactory.makeMessagesFor(self.users[indexPath.row].convoId)
         let dataSource = DemoChatDataSource(count: 10000, pageSize: 50)
+        dataSource.conversationId = self.users[indexPath.row].convoId
         let chatVC = DemoChatViewController()
         chatVC.dataSource = dataSource
         self.navigationController?.pushViewController(chatVC, animated: true)
