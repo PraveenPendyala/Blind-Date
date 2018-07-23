@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -42,6 +42,9 @@
                             <constraint firstAttribute="width" constant="40" id="XJL-C7-IU5"/>
                         </constraints>
                         <state key="normal" image="chatIcon"/>
+                        <connections>
+                            <action selector="chatButtonPressed:" destination="9lV-RH-xnE" eventType="touchUpInside" id="lI2-qx-mZJ"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

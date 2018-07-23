@@ -23,6 +23,7 @@ struct User: Codable {
     var profilePic           = ""
     private var state        = ""
     private var zip          = ""
+    var id                   = ""
     
     
     // MARK: -
@@ -34,11 +35,12 @@ struct User: Codable {
         profilePic = fbProfile.imageURL(for: FBSDKProfilePictureMode.normal, size: UIScreen.main.bounds.size).absoluteString
     }
     
-    init(_ dict: [String: Any]) {
+    init(_ dict: [String: Any], _ id: String = "") {
         self.city       = dict["city"] as? String ?? ""
         self.name       = dict["name"] as? String ?? ""
         self.profilePic = dict["profilePic"] as? String ?? ""
         self.facebookId = dict["facebookId"] as? String ?? ""
+        self.id         = id
     }
     
     

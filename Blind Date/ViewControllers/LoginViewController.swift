@@ -86,7 +86,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
     }
     
     private func checkIfInteresedIn() {
-        FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)").observeSingleEvent(of: .value) { (user) in
+        FirebaseManager.shared.userRef.child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value) { (user) in
             if !user.hasChild("interestedIn") {
                 let alert = UIAlertController(title: nil, message: "Are you interested in male or female?", preferredStyle: .alert)
                 let maleAction = UIAlertAction(title: "MALE", style: .default, handler: { (_) in
@@ -125,7 +125,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             }
             else if var userData = result as? [String:Any] {
                 userData.removeValue(forKey: "id")
-                FirebaseManager.shared.userRef.child("\(Auth.auth().currentUser!.uid)").updateChildValues(userData)
+                FirebaseManager.shared.userRef.child(Auth.auth().currentUser!.uid).updateChildValues(userData)
             }
         }
         connection.start()

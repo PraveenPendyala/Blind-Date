@@ -43,6 +43,7 @@ class DemoChatMessageFactory {
     class func makeTextMessage(_ uid: String, text: String, isIncoming: Bool) -> DemoTextMessageModel {
         let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: TextMessageModel<MessageModel>.chatItemType)
         let textMessageModel = DemoTextMessageModel(messageModel: messageModel, text: text)
+        textMessageModel.status = .success
         return textMessageModel
     }
 
@@ -152,13 +153,5 @@ extension DemoChatMessageFactory {
 
     static func makeMessagesSelectionMessages() -> [MessageModelProtocol] {
         return self.messages(fromDemoMessages: self.messagesSelectionMessages)
-    }
-    
-    static func makeMessagesFor( _ conversationId: String) {
-        FirebaseManager.shared.messagesRef.child(conversationId).observeSingleEvent(of: .value) { (snapshot) in
-            if let messages = snapshot.value as? [String: Any] {
-                print("")
-            }
-        }
     }
 }

@@ -55,7 +55,7 @@ final class UsersViewController: UIViewController {
         self.usersCollectionView.register(UINib(nibName: "UserCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UserCollectionViewCell")
         FirebaseManager.shared.userRef.observe(.value) { (data) in
             if let users = data.value as? [String: [String: Any]] {
-                self.users = users.map({ User($0.value)})
+                self.users = users.map({ User($0.value, $0.key) })
                 self.usersCollectionView.reloadData()
             }
         }
@@ -74,6 +74,7 @@ extension UsersViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
         cell.configure(self.users[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -89,5 +90,18 @@ extension UsersViewController: UICollectionViewDataSource, UICollectionViewDeleg
 extension UsersViewController: StoryboardInitializable {
     static func instantiateFromStoryboard() -> UsersViewController {
         return Storyboards.Main.instantiateViewController(withIdentifier: "UsersViewController") as! UsersViewController
+    }
+}
+
+
+// MARK: -
+// MARK: UserCollectionViewCellDelegate
+
+extension UsersViewController: UserCollectionViewCellDelegate {
+    func startConversationWith(_ convoId: String) {
+        let dataSource = DemoChatDataSource(convoId, pageSize: 50)
+        let chatVC = DemoChatViewController()
+        chatVC.dataSource = dataSource
+        self.navigationController?.pushViewController(chatVC, animated: true)
     }
 }

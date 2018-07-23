@@ -48,6 +48,7 @@ class DemoChatViewController: BaseChatViewController {
         self.title = "Chat"
         self.messagesSelector.delegate = self
         self.chatItemsDecorator = DemoChatItemsDecorator(messagesSelector: self.messagesSelector)
+        
     }
 
     var chatInputPresenter: BasicChatInputBarPresenter!

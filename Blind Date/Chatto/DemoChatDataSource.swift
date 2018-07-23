@@ -24,11 +24,12 @@
 
 import Foundation
 import Chatto
+import Firebase
 
 class DemoChatDataSource: ChatDataSourceProtocol {
     var nextMessageId: Int = 0
     let preferredMaxWindowSize = 500
-    var conversationId         = ""
+    private var conversationId = ""
     var slidingWindow: SlidingDataSource<ChatItemProtocol>!
     init(count: Int, pageSize: Int) {
         self.slidingWindow = SlidingDataSource(count: count, pageSize: pageSize) { [weak self] () -> ChatItemProtocol in
@@ -40,6 +41,20 @@ class DemoChatDataSource: ChatDataSourceProtocol {
 
     init(messages: [ChatItemProtocol], pageSize: Int) {
         self.slidingWindow = SlidingDataSource(items: messages, pageSize: pageSize)
+    }
+    
+    init(_ convoId: String, pageSize: Int) {
+        self.conversationId = convoId
+        self.slidingWindow  = SlidingDataSource(items: [], pageSize: 50)
+        FirebaseManager.shared.messagesRef.child(convoId).observeSingleEvent(of: .value) { (snapshot) in
+            if let messages = snapshot.value as? [String: [String: Any]] {
+                let texts = messages.map({ DemoChatMessageFactory.makeTextMessage($0.key,
+                                                                                   text: $0.value["message"] as? String ?? "",
+                                                                                   isIncoming: $0.value["firebasId"] as? String ?? "" == Auth.auth().currentUser!.uid) })
+                self.slidingWindow = SlidingDataSource(items: texts, pageSize: pageSize)
+                self.delegate?.chatDataSourceDidUpdate(self)
+            }
+        }
     }
 
     lazy var messageSender: DemoChatMessageSender = {
@@ -78,12 +93,16 @@ class DemoChatDataSource: ChatDataSourceProtocol {
     }
 
     func addTextMessage(_ text: String) {
-        let uid = "\(self.nextMessageId)"
-        self.nextMessageId += 1
-        let message = DemoChatMessageFactory.makeTextMessage(uid, text: text, isIncoming: false)
-        self.messageSender.sendMessage(message)
-        self.slidingWindow.insertItem(message, position: .bottom)
-        self.delegate?.chatDataSourceDidUpdate(self)
+//        let uid = "\(self.nextMessageId)"
+//        self.nextMessageId += 1
+//        let message = DemoChatMessageFactory.makeTextMessage(uid, text: text, isIncoming: false)
+//        self.messageSender.sendMessage(message)
+//        self.slidingWindow.insertItem(message, position: .bottom)
+//        self.delegate?.chatDataSourceDidUpdate(self)
+        let newMessage = FirebaseManager.shared.messagesRef.child("\(conversationId)").childByAutoId()
+        newMessage.setValue(["firebaseId" : Auth.auth().currentUser!.uid,
+                                "message" : text,
+                              "timestamp" : ServerValue.timestamp()])
     }
 
     func addPhotoMessage(_ image: UIImage) {
