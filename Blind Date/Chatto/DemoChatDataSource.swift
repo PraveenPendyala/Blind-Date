@@ -44,16 +44,27 @@ class DemoChatDataSource: ChatDataSourceProtocol {
     }
     
     init(_ convoId: String, pageSize: Int) {
+        // DEV NOTE: To prevent firebase from adding already present items twice on the initial load
+        var shouldStartObservingNewData = false
         self.conversationId = convoId
         self.slidingWindow  = SlidingDataSource(items: [], pageSize: 50)
-        FirebaseManager.shared.messagesRef.child(convoId).observeSingleEvent(of: .value) { (snapshot) in
-            if let messages = snapshot.value as? [String: [String: Any]] {
-                let texts = messages.map({ DemoChatMessageFactory.makeTextMessage($0.key,
-                                                                                   text: $0.value["message"] as? String ?? "",
-                                                                                   isIncoming: $0.value["firebasId"] as? String ?? "" == Auth.auth().currentUser!.uid) })
-                self.slidingWindow = SlidingDataSource(items: texts, pageSize: pageSize)
+        FirebaseManager.shared.messagesRef.child(convoId).queryOrdered(byChild: "timestamp").queryLimited(toLast: 1).observe(.childAdded) { (snapshot) in
+            if shouldStartObservingNewData, let message = self.makeTextMessage(snapshot) {
+                //        self.messageSender.sendMessage(message)
+                self.slidingWindow.insertItem(message, position: .bottom)
                 self.delegate?.chatDataSourceDidUpdate(self)
             }
+        }
+        FirebaseManager.shared.messagesRef.child(convoId).queryOrdered(byChild: "timestamp").observeSingleEvent(of: .value) { (snapshot) in
+            var messages = [DemoTextMessageModel]()
+            for child in snapshot.children {
+                if let childSnap = child as? DataSnapshot, let message = self.makeTextMessage(childSnap) {
+                    messages.append(message)
+                }
+            }
+            self.slidingWindow = SlidingDataSource(items: messages, pageSize: pageSize)
+            self.delegate?.chatDataSourceDidUpdate(self)
+            shouldStartObservingNewData = true
         }
     }
 
@@ -124,5 +135,13 @@ class DemoChatDataSource: ChatDataSourceProtocol {
     func adjustNumberOfMessages(preferredMaxCount: Int?, focusPosition: Double, completion:(_ didAdjust: Bool) -> Void) {
         let didAdjust = self.slidingWindow.adjustWindow(focusPosition: focusPosition, maxWindowSize: preferredMaxCount ?? self.preferredMaxWindowSize)
         completion(didAdjust)
+    }
+    
+    private func makeTextMessage(_ snapshot: DataSnapshot) ->  DemoTextMessageModel? {
+        guard let message = snapshot.value as? [String: Any] else { return nil}
+        let text = DemoChatMessageFactory.makeTextMessage(snapshot.key,
+                                                          text: message["message"] as? String ?? "",
+                                                          isIncoming: message["firebasId"] as? String ?? "" == Auth.auth().currentUser!.uid)
+        return text
     }
 }
