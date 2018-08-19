@@ -141,7 +141,7 @@ class DemoChatDataSource: ChatDataSourceProtocol {
         guard let message = snapshot.value as? [String: Any] else { return nil}
         let text = DemoChatMessageFactory.makeTextMessage(snapshot.key,
                                                           text: message["message"] as? String ?? "",
-                                                          isIncoming: message["firebasId"] as? String ?? "" == Auth.auth().currentUser!.uid)
+                                                          isIncoming: message["firebaseId"] as? String ?? "" != Auth.auth().currentUser!.uid)
         return text
     }
 }

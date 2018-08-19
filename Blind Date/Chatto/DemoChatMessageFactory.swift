@@ -55,9 +55,7 @@ class DemoChatMessageFactory {
 
     private class func makeRandomTextMessage(_ uid: String, isIncoming: Bool) -> DemoTextMessageModel {
         let incomingText: String = isIncoming ? "incoming" : "outgoing"
-        let maxText = self.demoText
-        let length: Int = 10 + Int(arc4random_uniform(300))
-        let text = "\(String(maxText[..<maxText.characters.index(maxText.startIndex, offsetBy: length)]))\n\n\(incomingText)\n#\(uid)"
+        let text = "\n\n\(incomingText)\n#\(uid)"
         return self.makeTextMessage(uid, text: text, isIncoming: isIncoming)
     }
 
