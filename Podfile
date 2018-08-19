@@ -10,7 +10,6 @@ target 'Blind Date' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Core'
-  pod 'JSQMessagesViewController'
   pod 'FBSDKLoginKit'
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'

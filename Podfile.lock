@@ -55,9 +55,6 @@ PODS:
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.1.1)"
   - GTMSessionFetcher/Core (1.1.11)
-  - JSQMessagesViewController (7.3.4):
-    - JSQSystemSoundPlayer (~> 2.0.1)
-  - JSQSystemSoundPlayer (2.0.1)
   - Kingfisher (4.7.0)
 
 DEPENDENCIES:
@@ -70,7 +67,6 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
-  - JSQMessagesViewController
   - Kingfisher
 
 SPEC REPOS:
@@ -90,8 +86,6 @@ SPEC REPOS:
     - FirebaseStorage
     - GoogleToolboxForMac
     - GTMSessionFetcher
-    - JSQMessagesViewController
-    - JSQSystemSoundPlayer
     - Kingfisher
 
 SPEC CHECKSUMS:
@@ -110,10 +104,8 @@ SPEC CHECKSUMS:
   FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
-  JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
-  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
 
-PODFILE CHECKSUM: e82d74295fd0a276f38134193572cd35b73f56ff
+PODFILE CHECKSUM: 9ae39872a845a412dc933b94d9b0e52f02a9c506
 
 COCOAPODS: 1.5.3
