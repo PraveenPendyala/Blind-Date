@@ -98,9 +98,10 @@ extension UsersViewController: StoryboardInitializable {
 // MARK: UserCollectionViewCellDelegate
 
 extension UsersViewController: UserCollectionViewCellDelegate {
-    func startConversationWith(_ convoId: String) {
+    func startConversationWith(_ convoId: String, _ user: User) {
         let dataSource = DemoChatDataSource(convoId, pageSize: 50)
         let chatVC = DemoChatViewController()
+        chatVC.title = user.name
         chatVC.dataSource = dataSource
         self.navigationController?.pushViewController(chatVC, animated: true)
     }

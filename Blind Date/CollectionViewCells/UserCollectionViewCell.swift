@@ -10,7 +10,7 @@ import Kingfisher
 import FirebaseAuth
 
 protocol UserCollectionViewCellDelegate: NSObjectProtocol {
-    func startConversationWith(_ convoId: String)
+    func startConversationWith(_ convoId: String, _ user: User)
 }
 
 final class UserCollectionViewCell: UICollectionViewCell {
@@ -78,6 +78,6 @@ final class UserCollectionViewCell: UICollectionViewCell {
         }
         FirebaseManager.shared.userRef.child("\(currentUser.id)/conversations/\(convoId)").setValue(true)
         FirebaseManager.shared.userRef.child("\(otherUser.id)/conversations/\(convoId)").setValue(true)
-        delegate?.startConversationWith(convoId)
+        delegate?.startConversationWith(convoId, otherUser)
     }
 }

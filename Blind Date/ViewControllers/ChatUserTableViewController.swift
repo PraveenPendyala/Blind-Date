@@ -73,6 +73,7 @@ extension ChatUserTableViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataSource = DemoChatDataSource(self.users[indexPath.row].convoId, pageSize: 50)
         let chatVC = DemoChatViewController()
+        chatVC.title      = self.users[indexPath.row].userName
         chatVC.dataSource = dataSource
         self.navigationController?.pushViewController(chatVC, animated: true)
     }

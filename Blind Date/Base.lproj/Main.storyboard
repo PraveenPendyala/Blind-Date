@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I4Q-pV-js9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I4Q-pV-js9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
-        <!--Chat User Table View Controller-->
+        <!--CHAT HISTORY-->
         <scene sceneID="4Ul-Qo-5Wd">
             <objects>
                 <viewController id="sT6-6E-z9h" customClass="ChatUserTableViewController" customModule="Blind_Date" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yMf-ib-DXl">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -69,6 +69,10 @@
                             <constraint firstItem="Hw0-m9-rYA" firstAttribute="top" secondItem="yMf-ib-DXl" secondAttribute="bottom" id="ieP-xw-Rzf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="CHAT HISTORY" id="IFR-dH-sSB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="a2v-GW-cSS"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="yMf-ib-DXl" id="Cd8-tL-uge"/>
                     </connections>
@@ -166,7 +170,8 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="9j6-ko-E5a">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="XOX-kj-Emx">
+                        <barButtonItem key="backBarButtonItem" title=" " id="OEF-5m-9Ak"/>
+                        <barButtonItem key="rightBarButtonItem" title="Chats" id="XOX-kj-Emx">
                             <connections>
                                 <segue destination="sT6-6E-z9h" kind="show" id="DrW-6U-Se4"/>
                             </connections>

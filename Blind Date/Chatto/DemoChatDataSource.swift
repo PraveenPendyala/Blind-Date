@@ -139,9 +139,14 @@ class DemoChatDataSource: ChatDataSourceProtocol {
     
     private func makeTextMessage(_ snapshot: DataSnapshot) ->  DemoTextMessageModel? {
         guard let message = snapshot.value as? [String: Any] else { return nil}
+        var timeStamp = Date()
+        if let time = message["timestamp"] as? TimeInterval {
+            timeStamp = Date(timeIntervalSince1970: time/1000)
+        }
         let text = DemoChatMessageFactory.makeTextMessage(snapshot.key,
-                                                          text: message["message"] as? String ?? "",
-                                                          isIncoming: message["firebaseId"] as? String ?? "" != Auth.auth().currentUser!.uid)
+                                                    text: message["message"] as? String ?? "",
+                                              isIncoming: message["firebaseId"] as? String ?? "" != Auth.auth().currentUser!.uid,
+                                                          timeStamp)
         return text
     }
 }

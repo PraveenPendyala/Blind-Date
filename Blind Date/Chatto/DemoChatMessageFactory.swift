@@ -40,8 +40,8 @@ class DemoChatMessageFactory {
         return self.makeRandomTextMessage(uid, isIncoming: isIncoming)
     }
 
-    class func makeTextMessage(_ uid: String, text: String, isIncoming: Bool) -> DemoTextMessageModel {
-        let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: TextMessageModel<MessageModel>.chatItemType)
+    class func makeTextMessage(_ uid: String, text: String, isIncoming: Bool, _ date: Date=Date()) -> DemoTextMessageModel {
+        let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: TextMessageModel<MessageModel>.chatItemType,date)
         let textMessageModel = DemoTextMessageModel(messageModel: messageModel, text: text)
         textMessageModel.status = .success
         return textMessageModel
@@ -82,10 +82,10 @@ class DemoChatMessageFactory {
         return self.makePhotoMessage(uid, image: UIImage(named: imageName)!, size: imageSize, isIncoming: isIncoming)
     }
 
-    private class func makeMessageModel(_ uid: String, isIncoming: Bool, type: String) -> MessageModel {
+    private class func makeMessageModel(_ uid: String, isIncoming: Bool, type: String,_ date: Date=Date()) -> MessageModel {
         let senderId = isIncoming ? "1" : "2"
         let messageStatus = isIncoming || arc4random_uniform(100) % 3 == 0 ? MessageStatus.success : .failed
-        return MessageModel(uid: uid, senderId: senderId, type: type, isIncoming: isIncoming, date: Date(), status: messageStatus)
+        return MessageModel(uid: uid, senderId: senderId, type: type, isIncoming: isIncoming, date: date, status: messageStatus)
     }
 }
 
