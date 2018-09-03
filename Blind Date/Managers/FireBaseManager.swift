@@ -22,7 +22,7 @@ final class FirebaseManager {
     }
     
     let userRef       = Database.database().reference().child("users")
-    let messagesRef   = Database.database().reference().child("messages")
+    let messagesRef   = Database.database().reference().child("conversations")
     
     // MARK: -
     // MARK: Init
